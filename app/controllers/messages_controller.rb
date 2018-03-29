@@ -19,7 +19,7 @@ class MessagesController < ApplicationController
       flash[:success] = "Messageが正常に投稿されました"
       redirect_to @message
     else
-      flash.now[:danger] ="Messageが投稿されませんでした"
+      flash.now[:danger] = "Messageが投稿されませんでした"
       render :new
     end
   end
@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
       flash[:success] = "Messageは正常に更新されました"
       redirect_to @message
     else
-      flash[:danger] = "Messageは更新されませんでした"
+      flash.now[:danger] = "Messageは更新されませんでした"
       render :edit
     end
   end
@@ -49,9 +49,11 @@ class MessagesController < ApplicationController
   
   private
   
-  # Stong Parameter
+  #Stong Parameter
   def message_params
     params.require(:message).permit(:content)
   end
   
 end
+
+ 
