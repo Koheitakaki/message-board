@@ -54,7 +54,7 @@ class MessagesController < ApplicationController
   end
   #Stong Parameter
   def message_params
-    params.require(:message).permit(:content)
+    params.require(:message).permit(:content, :title)
   end
   
 end
