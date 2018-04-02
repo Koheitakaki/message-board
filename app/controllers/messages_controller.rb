@@ -51,7 +51,7 @@ class MessagesController < ApplicationController
   
   def set_message
     @message = Message.find(params[:id])
-  
+  end
   #Stong Parameter
   def message_params
     params.require(:message).permit(:content)
